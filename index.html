@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix Gaming 444 | Video Editing & Growth Portfolio</title>
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #1f2833;
+            --text-main: #ffffff;
+            --text-secondary: #c5a8ff;
+            --accent-purple: #8a2be2;
+            --accent-blue: #00d2ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 40px 0;
+            border-bottom: 2px solid var(--card-bg);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--text-main);
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .location {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        /* Stats Flex Section */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin: 40px 0;
+        }
+
+        .stat-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            border: 1px solid rgba(138, 43, 226, 0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .stat-card h2 {
+            font-size: 1.8rem;
+            color: var(--accent-blue);
+            margin-bottom: 5px;
+        }
+
+        .stat-card p {
+            font-size: 0.8rem;
+            color: #bbb;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Featured Video Section */
+        .video-section {
+            margin: 40px 0;
+        }
+
+        .video-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(138, 43, 226, 0.3);
+            border: 1px solid var(--accent-purple);
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* About & Services Section */
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .info-card {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .info-card h4 {
+            color: var(--accent-blue);
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 5px;
+        }
+
+        .info-card ul {
+            list-style: none;
+        }
+
+        .info-card ul li {
+            margin-bottom: 10px;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .info-card ul li strong {
+            color: var(--text-main);
+        }
+
+        /* Contact/Hire Section */
+        .contact-section {
+            background: linear-gradient(135deg, #1f2833 0%, #111721 100%);
+            padding: 35px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid var(--accent-blue);
+        }
+
+        .contact-section h3 {
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+        }
+
+        .btn-discord {
+            background-color: #5865F2;
+            color: white;
+        }
+
+        .btn-email {
+            background-color: #ea4335;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Mobile Responsive adjustments */
+        @media (max-width: 768px) {
+            .stats-container {
+                grid-template-columns: 1fr;
+            }
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            .contact-links {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Mix Gaming 444</h1>
+            <p>High-Retention Manhwa & Anime Video Editor & YouTube Growth Expert</p>
+            <div class="location">Pakhtoon Ali • Landi Kotal, Pakistan</div>
+        </header>
+
+        <!-- Live Proof Performance Stats -->
+        <div class="stats-container">
+            <div class="stat-card">
+                <h2>60,000+</h2>
+                <p>Views on Featured Edit</p>
+            </div>
+            <div class="stat-card">
+                <h2>10,000+</h2>
+                <p>Watch Hours Driven</p>
+            </div>
+            <div class="stat-card">
+                <h2>200K+</h2>
+                <p>Monthly Creator Views</p>
+            </div>
+            <div class="stat-card">
+                <h2>100%</h2>
+                <p>CapCut Optimized</p>
+            </div>
+        </div>
+
+        <!-- Video Portfolio Showcase -->
+        <div class="video-section">
+            <h3>Featured Production Project</h3>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/13w_f8_BaVc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <!-- Services & Rates Grid -->
+        <div class="details-grid">
+            <div class="info-card">
+                <h4>Editing & Platform Strategy</h4>
+                <ul>
+                    <li>⚡ <strong>Specialty:</strong> High-pacing long-form Manhwa/Anime recaps.</li>
+                    <li>📱 <strong>Workflow:</strong> 100% mobile execution via high-tier CapCut production.</li>
+                    <li>🧠 <strong>Creator Insight:</strong> Experienced YouTuber with personal experience generating 200K+ monthly views. I understand retention.</li>
+                </ul>
+            </div>
+            <div class="info-card">
+                <h4>Rates & Capacity</h4>
+                <ul>
+                    <li>⏱️ <strong>Length per Chapter:</strong> 4 to 6 minutes long.</li>
+                    <li>💰 <strong>Standard Rate:</strong> $1.25 to $2.00 per chapter.</li>
+                    <li>📦 <strong>Bulk Projects:</strong> Massive weekly volume capacity with sharp turnaround.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Professional Contact CTA Section -->
+        <div class="contact-section">
+            <h3>Let's Build Your Channel's Retention</h3>
+            <p>Ready to hire a high-output editor who knows the YouTube ecosystem inside and out? Get in touch now:</p>
+            <div class="contact-links">
+                <a href="https://wa.me/923089169791" target="_blank" class="btn btn-whatsapp">Chat on WhatsApp</a>
+                <a href="mailto:mixbusiness444@gmail.com" class="btn btn-email">Email Inquiries</a>
+                <a href="#" onclick="alert('Discord Username: Mixgaming444og'); return false;" class="btn btn-discord">Discord: Mixgaming444og</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Mix Gaming 444 (Pakhtoon Ali). All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
